@@ -1,5 +1,5 @@
 # New American Economy Starter Template 
-_(Based off The Pudding Starter Template)
+_Note: (Based off The Pudding Starter Template)
 
 A starter template for projects.
 
