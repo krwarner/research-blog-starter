@@ -1,0 +1,126 @@
+/*
+        This font software is the property of Commercial Type.
+
+        You may not modify the font software, use it on another website, or install it on a computer.
+
+        License information is available at http://commercialtype.com/eula
+        For more information please visit Commercial Type at http://commercialtype.com or email us at info[at]commercialtype.com
+
+        Copyright (C) 2016 Schwartzco Inc.
+        License: 1608-CJJHKV     
+*/
+
+
+@font-face {
+  font-family: 'Lyon Text Web';
+  src: url('LyonText-BoldItalic-Web.eot');
+  src: url('LyonText-BoldItalic-Web.eot?#iefix') format('embedded-opentype'),
+       url('LyonText-BoldItalic-Web.woff2') format('woff2'),
+       url('LyonText-BoldItalic-Web.woff') format('woff');
+  font-weight:  700;
+  font-style:   italic;
+  font-stretch: normal;
+}
+
+.LyonText-BoldItalic-Web {
+  font-family: 'Lyon Text Web';
+  font-weight:  700;
+  font-style:   italic;
+  font-stretch: normal;
+}
+
+
+@font-face {
+  font-family: 'Lyon Text Web';
+  src: url('LyonText-Bold-Web.eot');
+  src: url('LyonText-Bold-Web.eot?#iefix') format('embedded-opentype'),
+       url('LyonText-Bold-Web.woff2') format('woff2'),
+       url('LyonText-Bold-Web.woff') format('woff');
+  font-weight:  700;
+  font-style:   normal;
+  font-stretch: normal;
+}
+
+.LyonText-Bold-Web {
+  font-family: 'Lyon Text Web';
+  font-weight:  700;
+  font-style:   normal;
+  font-stretch: normal;
+}
+
+
+@font-face {
+  font-family: 'Lyon Text Web';
+  src: url('LyonText-RegularItalic-Web.eot');
+  src: url('LyonText-RegularItalic-Web.eot?#iefix') format('embedded-opentype'),
+       url('LyonText-RegularItalic-Web.woff2') format('woff2'),
+       url('LyonText-RegularItalic-Web.woff') format('woff');
+  font-weight:  400;
+  font-style:   italic;
+  font-stretch: normal;
+}
+
+.LyonText-RegularItalic-Web {
+  font-family: 'Lyon Text Web';
+  font-weight:  400;
+  font-style:   italic;
+  font-stretch: normal;
+}
+
+
+@font-face {
+  font-family: 'Lyon Text Web';
+  src: url('LyonText-Regular-Web.eot');
+  src: url('LyonText-Regular-Web.eot?#iefix') format('embedded-opentype'),
+       url('LyonText-Regular-Web.woff2') format('woff2'),
+       url('LyonText-Regular-Web.woff') format('woff');
+  font-weight:  400;
+  font-style:   normal;
+  font-stretch: normal;
+}
+
+.LyonText-Regular-Web {
+  font-family: 'Lyon Text Web';
+  font-weight:  400;
+  font-style:   normal;
+  font-stretch: normal;
+}
+
+
+@font-face {
+  font-family: 'Lyon Display Web';
+  src: url('LyonDisplay-RegularItalic-Web.eot');
+  src: url('LyonDisplay-RegularItalic-Web.eot?#iefix') format('embedded-opentype'),
+       url('LyonDisplay-RegularItalic-Web.woff2') format('woff2'),
+       url('LyonDisplay-RegularItalic-Web.woff') format('woff');
+  font-weight:  400;
+  font-style:   italic;
+  font-stretch: normal;
+}
+
+.LyonDisplay-RegularItalic-Web {
+  font-family: 'Lyon Display Web';
+  font-weight:  400;
+  font-style:   italic;
+  font-stretch: normal;
+}
+
+
+@font-face {
+  font-family: 'Lyon Display Web';
+  src: url('LyonDisplay-Regular-Web.eot');
+  src: url('LyonDisplay-Regular-Web.eot?#iefix') format('embedded-opentype'),
+       url('LyonDisplay-Regular-Web.woff2') format('woff2'),
+       url('LyonDisplay-Regular-Web.woff') format('woff');
+  font-weight:  400;
+  font-style:   normal;
+  font-stretch: normal;
+}
+
+.LyonDisplay-Regular-Web {
+  font-family: 'Lyon Display Web';
+  font-weight:  400;
+  font-style:   normal;
+  font-stretch: normal;
+}
+
