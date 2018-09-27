@@ -1,4 +1,4 @@
-# The Pudding Starter Template
+# New American Economy Starter Template (Based off The Pudding Starter Template)
 
 A starter template for projects.
 
