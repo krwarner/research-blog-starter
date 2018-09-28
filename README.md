@@ -61,7 +61,7 @@ git push --set-upstream origin master
 
 #### Documentation
 
-See the generated [README](https://github.com/polygraph-cool/starter/blob/master/README.story.md#development) file in the new project directory for instructions.
+See the generated [README](https://github.com/krwarner/research-blog-starter/blob/master/README.story.md#development) file in the new project directory for instructions.
 
 ## Basic
 
