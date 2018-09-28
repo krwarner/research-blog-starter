@@ -39,6 +39,7 @@
     "gulp-sourcemaps": "^2.6.4",
     "gulp-stylus": "^2.7.0",
     "gulp-util": "^3.0.7",
+    "hbs": "^4.0.1",
     "lodash.debounce": "^4.0.8",
     "nouislider": "^11.1.0",
     "prettier": "^1.14.0",
