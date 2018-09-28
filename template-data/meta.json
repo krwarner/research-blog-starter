@@ -12,9 +12,5 @@
     "url": "https://twitter.com/newamericanecon",
     "twitterHandle": "@newamericanecon"
   },
-  "analytics": "window.dataLayer = window.dataLayer || []; 
-    function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-
-      gtag('config', 'UA-18821235-10');"
+  "analytics": ""
 }
