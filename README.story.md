@@ -29,7 +29,7 @@ Fill out `template-data/meta.json`
 
 ##### Analytics
 
-For The Pudding analytics use `UA-90567923-1`.
+For New American Economy analytics use `UA-18821235-10`.
 
 #### Copy
 
