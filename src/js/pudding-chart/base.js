@@ -1,13 +1,13 @@
 /*
  USAGE (example: line chart)
  1. c+p this template to a new file (line.js)
- 2. change puddingChartName to puddingChartLine
- 3. in graphic file: import './pudding-chart/line'
- 4a. const charts = d3.selectAll('.thing').data(data).puddingChartLine();
- 4b. const chart = d3.select('.thing').datum(datum).puddingChartLine();
+ 2. change naeChartName to naeChartLine
+ 3. in graphic file: import './nae-chart/line'
+ 4a. const charts = d3.selectAll('.thing').data(data).naeChartLine();
+ 4b. const chart = d3.select('.thing').datum(datum).naeChartLine();
 */
 
-d3.selection.prototype.puddingChartName = function init(options) {
+d3.selection.prototype.naeChartName = function init(options) {
 	function createChart(el) {
 		const $sel = d3.select(el);
 		let data = $sel.datum();
@@ -33,7 +33,7 @@ d3.selection.prototype.puddingChartName = function init(options) {
 		const Chart = {
 			// called once at start
 			init() {
-				$svg = $sel.append('svg.pudding-chart');
+				$svg = $sel.append('svg.nae-chart');
 				const $g = $svg.append('g');
 
 				// offset chart for margins

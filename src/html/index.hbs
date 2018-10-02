@@ -1,5 +1,11 @@
 <!doctype html>
-<html lang='en' data-version='{{timestamp}}'>
+
+<!--[if lt IE 7]><html class="no-js ie ie6 lt-ie9 lt-ie8 lt-ie7" lang="en-US" prefix="og: http://ogp.me/ns#"> <![endif]-->
+<!--[if IE 7]><html class="no-js ie ie7 lt-ie9 lt-ie8" lang="en-US" prefix="og: http://ogp.me/ns#"> <![endif]-->
+<!--[if IE 8]><html class="no-js ie ie8 lt-ie9" lang="en-US" prefix="og: http://ogp.me/ns#"> <![endif]-->
+<!--[if gt IE 8]><!-->
+
+<html class="no-js" lang="en-US" prefix="og: http://ogp.me/ns#">
 
 <head>
 
@@ -9,13 +15,11 @@
 	{{> base/stylesheets}}
 	<!-- endsmoosh -->
 
-	{{> base/scripts}}
-
-	<!-- boilerplate.css -->
-
 	{{> base/font}}
 
 	<!-- smoosh -->
+	<script src="https://www.newamericaneconomy.org/wp-content/themes/nae-wp-theme/static/build/js/modernizr-custom.js" defer></script>
+	<script type='text/javascript' src='https://www.newamericaneconomy.org/wp-content/themes/nae-wp-theme/static/js/jquery.min.js?ver=1.0.0'></script>
 	<script src='critical.js'></script>
 	<!-- endsmoosh -->
 
@@ -43,19 +47,18 @@
 							
 							<!-- PUT ALL YOUR HTML HERE-->
 						</div>
-					</div>
-				</section>
-			</article>
-		</div><!-- /page-article -->
+					</section>
+				</article>
+			</div><!-- /page-article -->
 
 		{{> base/news-footer}}
 
 		</div>
 	</section>
 
-	{{!--
-	<script src='{{basepath}}assets/scripts/d3.v5.0.0.min.js'></script> --}}
-	<script src='https://github.com/krwarner/assets/scripts/d3.v4.10.2+jetpack.min.js'></script>
+	<!-- {{!--
+	<script src='{{basepath}}assets/scripts/d3.v5.0.0.min.js'></script> --}} -->
+	<script src='https://{{basepath}}assets/scripts/d3.v4.10.2+jetpack.min.js'></script>
 	<script src='bundle.js?version={{timestamp}}' async></script>
 </body>
 
