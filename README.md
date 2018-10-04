@@ -34,7 +34,7 @@ _Please note: do not use or reproduce New American Economy logo or fonts without
 To create a new project, make a new directory (eg. `mkdir project-name`), `cd` into it, and run:
 
 ```
-curl -Lk https://bit.ly/2J0L3MD > Makefile; make enhanced;
+curl -Lk https://github.com/krwarner/research-blog-starter/blob/master/Makefile > Makefile; make enhanced;
 ```
 
 If that doesn't work you may need to create a new directory and a new repository to go along with it. To do so, clone / download this repository move all of the files into the new directory then create a new repository with the same name and then in your git terminal run:
