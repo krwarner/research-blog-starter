@@ -5,7 +5,7 @@ A starter template for data visualization projects.
 
 **If creating a brand new project from scratch:** Follow setup instructions for the [basic](#basic):bread: (plain HTML/JS/CSS) or [enhanced](#enhanced):fire: (node + gulp + awesome sauce) version. For most data visualization projects it is best to go with the enhanced version. 
 
-**Else contributing to an existing project:** clone the repo (enhanced version: + run `npm install`). Depending on how up to date your installation is, you may need to run npm install fix and / or upgrade other specific dependencies. 
+**Else contributing to an existing project:** clone the repo (enhanced version: + run `npm install`). Depending on how up to date your installation is, you may need to run npm install fix and / or upgrade other specific dependencies. As of 10/4/2018 this template requires that you use gulp@3.9.1. DO NOT upgrade to gulp@4.0.0.
 
 _Please note: do not use or reproduce New American Economy logo or fonts without written permission._
 
