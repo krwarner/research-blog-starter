@@ -37,8 +37,8 @@ Using a Google Doc for copy is recommended. We use [ArchieML](http://archieml.or
 
 **Setup Google doc**
 
-- Create a Google Doc
-- Click `Share` button -> advanced -> Change... -> to "Anyone with this link"
+- Copy the template Google Doc in the PNAE Google Drive in Research -> Projects -> Data Viz Blog
+- Click `Share` button -> advanced -> Change... -> to "Anyone with this link" (Not just within the NAE network)
 - In the address bar, grab the ID - eg. ...com/document/d/**1IiA5a5iCjbjOYvZVgPcjGzMy5PyfCzpPF-LnQdCdFI0**/edit
 - In the file `config.json` in root of project, paste in the ID
 
@@ -60,7 +60,7 @@ This way you can drop in svg icons anywhere in your HTML code whilst keeping it 
 
 Take a look at `entry.js`. This is the kickoff file, the only one included and run automatically.
 
-Then take a look at `graphic.js`, it has some basic skeleton stuff setup for you. This is imported and called from `entry.js` once on load, and subsequently on a debounced resize event. I recommend putting your code in here. If you want to create more files, I recommending doing that in `graphic.js`, but remember they won't be executed until you import them.
+Then take a look at `graphic.js`, it has some basic skeleton stuff setup for you. This is imported and called from `entry.js` once on load, and subsequently on a debounced resize event. I recommend putting your code in here. If you want to create more files, I recommend doing that in `graphic.js`, but remember they won't be executed until you import them.
 
 [D3 Jetpack](https://github.com/gka/d3-jetpack/) is included globally by default. For any other libraries, it is recommend that you use `npm` to install and import them. You can also do it the vanilla way by including them in the `src/assets` folder and putting a script tag in the HTML.
 
@@ -90,7 +90,7 @@ In the folder `src/js/utils` there a are a bunch of handy helper JS functions.
 - `lookup-state-abbr.js`: Get state abbrevation from state name.
 - `tracker.js`: Fire simple GA tracking on events.
 
-#### The Pudding's favorite libraries
+#### Favorite libraries
 
 - [d3-annotation](http://d3-annotation.susielu.com/)
 - [lodash](https://lodash.com/)
@@ -101,7 +101,7 @@ In the folder `src/js/utils` there a are a bunch of handy helper JS functions.
 - [scrollama](https://github.com/russellgoldenberg/scrollama)
 - [ScrollWatch](https://edull24.github.io/ScrollWatch/)
 
-NoUISlider is included by default, with some preset pudding styles. To include it, simply include the library in your JS file `import noUiSlider from 'nouislider'`. Then in `src/css/config.styl`, uncomment `no-ui-slider.styl`.
+NoUISlider is included by default, with some preset NAE styles. To include it, simply include the library in your JS file `import noUiSlider from 'nouislider'`. Then in `src/css/config.styl`, uncomment `no-ui-slider.styl`.
 
 ## CSS
 
@@ -113,38 +113,36 @@ Checkout some of the auto-included files in `src/css/utils/` (`variables.styl`, 
 
 ## Fonts
 
-Fonts are loaded async and use the [FOUT](https://www.zachleat.com/web/comprehensive-webfonts/#fout-class) practice. We have three font families:
+Fonts are loaded async and use the [FOUT](https://www.zachleat.com/web/comprehensive-webfonts/#fout-class) practice. We have two font families:
 
-- **Canela** (class name: `tk-canela`)
-- **Publico** (class name: `tk-publico`)
-- **Atlas Grotesk** (class name: `tk-atlas`)
+- **Lyon** (class name: `nae-lyon`)
+- **Founders Grotesk** (class name: `nae-grotesk`)
 
-Simply include the class on the element, and all children will inherit it. Publico is included on the body tag by default.
+Simply include the class on the element, and all children will inherit it.
 
 Example:
 
 ```html
 <div class='example'>
-	<p class='tk-atlas'>test</p>
+	<p class='nae-grotesk'>test</p>
 </div>
 ```
 
 Use the **font-weight** CSS property. Available weights:
 
-- Canela: 300, 700
-- Publico: 400, 700
-- Atlas: 400, 500, 600
+- Lyon: 400, 700, 400 Italic
+- Founders: 400, 500, 600
 
 ## Assets
 
 **Where it goes:** `src/assets/`
 
-I reccommend creating separate directories for images, data, etc. Assets can always be referenced relative to `assets` directory. For example:
+I recommend creating separate directories for images, data, etc. Assets can always be referenced relative to `assets` directory. For example:
 
 - `<img src='assets/img/test.jpg'>`
 - `d3.csv('assets/data/test.csv')`
 
-When deployed, assets paths will remain relative. _However_, you'll notice that in `index.hbs` there is a line that like `<script src='{{basepath}}assets/scripts/d3.v4.12.0+jetpack.min.js'></script>`. `basepath` here switches from nothing in local development, to `https://pudding.cool/` in production. We have a common assets folder for stuff like (which also occurs with fonts). If you need to use this project for a non-pudding one, make sure to update the `basepath` variable in `gulp-tasks/html.js`.
+When deployed, assets paths will remain relative. _However_, you'll notice that in `index.hbs` there is a line that like `<script src='{{basepath}}assets/scripts/d3.v4.12.0+jetpack.min.js'></script>`. `basepath` here switches from nothing in local development, to `https://github.com/krwarner/` in production. We have a common assets folder for stuff like this (which also occurs with fonts). If you need to use this project for a non-NAE one, make sure to update the `basepath` variable in `gulp-tasks/html.js`.
 
 ## Deploy
 
@@ -156,24 +154,18 @@ This generates a single html file with inlined css, a single js file, and a fold
 
 Run `make github` (make sure you've enabled github pages in your repo settings to pull from `docs`).
 
-**Update The Pudding version (launch)**
-
-Requirements:
-
-- [awscli](https://aws.amazon.com/cli/)
-- [configure aws](http://docs.aws.amazon.com/cli/latest/reference/configure/index.html)
-- [configure cloud](http://docs.aws.amazon.com/cli/latest/reference/cloudfront/create-invalidation.html).
+**Update NAE version (launch) _Not Updated Yet; See Github pages version_**
 
 In `Makefile`, replace `year/month/name` with your own (eg. `2017/01/nba`). Uncomment code.
 
-Run `make pudding` to deploy and bust cache. If you only made changes to html/css/js, you can run `make aws-htmljs` then `make aws-cache` (it will be much quicker than re-uploading all your assets).
+Run `make nae` to deploy and bust cache.
 
 ## Pre-launch checklist
 
-- optimize images: make sure they aren't unncessarily large in dimensions (should be no more than 2x their final rendered dimensions), should also crunched with something like [imageoptim](https://imageoptim.com/online).
+- optimize images: make sure they aren't unncessarily large in dimensions (should be no more than 2x their final rendered dimensions), should also be crunched with something like [imageoptim](https://imageoptim.com/online).
 - clean data: reduce filesize bloat by making sure you aren't loading unnecessary columns and rows.
 - remove console logs: aesthetics :smile:
-- enable anayltics: put `UA-90567923-1` in `template-data/meta.json`
+- enable anayltics: put `UA-18821235-10` in `template-data/meta.json`
 - fill out metadata: `template-data/meta.json`
 - record project recap
 - create two social images:
