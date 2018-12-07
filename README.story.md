@@ -16,13 +16,6 @@ The main HTML file is `src/html/index.hbs`. Generally speaking, You should mostl
 
 Partials are not automatically included. You must add them to `index.hbs`. If you created a new file `content.hbs` it would be referenced as `{{> story/content }}`.
 
-#### Sticky header with menu
-
-Change `base/header` in `index.hbs`:
-
-- `{{> base/header 'sticky' }}`
-- `{{> base/header 'sticky-dark' }}`
-
 #### Metadata
 
 Fill out `template-data/meta.json`
@@ -42,7 +35,7 @@ Using a Google Doc for copy is recommended. We use [ArchieML](http://archieml.or
 - In the address bar, grab the ID - eg. ...com/document/d/**1IiA5a5iCjbjOYvZVgPcjGzMy5PyfCzpPF-LnQdCdFI0**/edit
 - In the file `config.json` in root of project, paste in the ID
 
-Running `gulp fetch-google` at any point (even in new tab while server is running) will pull down the latest, and output a file `template-data/copy.json`.
+Running `gulp fetch-google` at any point (even in new tab while server is running) will pull the latest, and output a file `template-data/copy.json`.
 
 You can now reference the JSON in your HTML, namespaced by `copy` (eg. `<p>{{copy.explanation}}</p>`).
 
@@ -78,7 +71,7 @@ Usage: reference in the `index.hbs` file `<script src='assets/scripts/[name].js'
 
 #### JavaScript utilties
 
-In the folder `src/js/utils` there a are a bunch of handy helper JS functions.
+In the folder `src/js/utils` there are a bunch of handy helper JS functions.
 
 - `dom.js`: Super minimial wrapper on basic vanilla dom selection for convenience and cross-browser.
 - `is-mobile.js`: Device sniffing to detect if on mobile hardware.
@@ -144,17 +137,21 @@ I recommend creating separate directories for images, data, etc. Assets can alwa
 
 When deployed, assets paths will remain relative. _However_, you'll notice that in `index.hbs` there is a line that like `<script src='{{basepath}}assets/scripts/d3.v4.12.0+jetpack.min.js'></script>`. `basepath` here switches from nothing in local development, to `https://github.com/krwarner/` in production. We have a common assets folder for stuff like this (which also occurs with fonts). If you need to use this project for a non-NAE one, make sure to update the `basepath` variable in `gulp-tasks/html.js`.
 
-## Deploy
+**Update Github pages version (during development)**
+
+Run `make github` (make sure you've enabled github pages in your repo settings to pull from `docs`).
+
+## Deploy - If deploying somewhere other than Github Pages
+
+**This is not currently set to create a distribution outside Github Pages, therefore will result in an error. To be updated at a later date.**
 
 Run `gulp dist`
 
 This generates a single html file with inlined css, a single js file, and a folder with assets in the `dist` folder.
 
-**Update Github pages version (during development)**
-
-Run `make github` (make sure you've enabled github pages in your repo settings to pull from `docs`).
-
 **Update NAE version (launch) _Not Updated Yet; See Github pages version_**
+
+**This is only if we are going to be deploying somewhere other than Github Pages. To be updated at a later date**
 
 In `Makefile`, replace `year/month/name` with your own (eg. `2017/01/nba`). Uncomment code.
 
@@ -164,10 +161,10 @@ Run `make nae` to deploy and bust cache.
 
 - optimize images: make sure they aren't unncessarily large in dimensions (should be no more than 2x their final rendered dimensions), should also be crunched with something like [imageoptim](https://imageoptim.com/online).
 - clean data: reduce filesize bloat by making sure you aren't loading unnecessary columns and rows.
-- remove console logs: aesthetics :smile:
-- enable anayltics: put `UA-18821235-10` in `template-data/meta.json`
+- remove console logs
+- enable anayltics: put `UA-18821235-10` in `template-data/meta.json` (May need updating)
 - fill out metadata: `template-data/meta.json`
-- record project recap
+- record project recap and any necessary documentation
 - create two social images:
   * Facebook: 1200 x 628 (`src/assets/social/social-facebook.jpg`)
   * Twitter: 1024 x 576 (`src/assets/social/social-twitter.jpg`)
