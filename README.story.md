@@ -49,9 +49,9 @@ This way you can drop in svg icons anywhere in your HTML code whilst keeping it 
 
 ## JavaScript
 
-**Where it goes:** `src/js/`
+**Where it goes:** `assets/scripts/`
 
-Take a look at `entry.js`. This is the kickoff file, the only one included and run automatically.
+Take a look at `entry.js`. This is the file that handles the scrolly-telling effects and stepping, it is referenced in `index.html`.
 
 Then take a look at `graphic.js`, it has some basic skeleton stuff setup for you. This is imported and called from `entry.js` once on load, and subsequently on a debounced resize event. I recommend putting your code in here. If you want to create more files, I recommend doing that in `graphic.js`, but remember they won't be executed until you import them.
 
@@ -106,25 +106,9 @@ Checkout some of the auto-included files in `src/css/utils/` (`variables.styl`, 
 
 ## Fonts
 
-Fonts are loaded async and use the [FOUT](https://www.zachleat.com/web/comprehensive-webfonts/#fout-class) practice. We have two font families:
+If additional fonts are required other than Lyon and Founders Grotesk, they are loaded async and use the [FOUT](https://www.zachleat.com/web/comprehensive-webfonts/#fout-class) practice. We have two font families:
 
-- **Lyon** (class name: `nae-lyon`)
-- **Founders Grotesk** (class name: `nae-grotesk`)
 
-Simply include the class on the element, and all children will inherit it.
-
-Example:
-
-```html
-<div class='example'>
-	<p class='nae-grotesk'>test</p>
-</div>
-```
-
-Use the **font-weight** CSS property. Available weights:
-
-- Lyon: 400, 700, 400 Italic
-- Founders: 400, 500, 600
 
 ## Assets
 
@@ -137,9 +121,14 @@ I recommend creating separate directories for images, data, etc. Assets can alwa
 
 When deployed, assets paths will remain relative. _However_, you'll notice that in `index.hbs` there is a line that like `<script src='{{basepath}}assets/scripts/d3.v4.12.0+jetpack.min.js'></script>`. `basepath` here switches from nothing in local development, to `https://github.com/krwarner/` in production. We have a common assets folder for stuff like this (which also occurs with fonts). If you need to use this project for a non-NAE one, make sure to update the `basepath` variable in `gulp-tasks/html.js`.
 
-**Update Github pages version (during development)**
+**Update Github pages version (during development and for deploying)**
 
-Run `make github` (make sure you've enabled github pages in your repo settings to pull from `docs`).
+Run `make github` (make sure you've enabled github pages in your repo settings to pull from `docs`). If that doesn't work enter the following in your Git terminal:
+`rm -r docs`
+`cp -r dev/ docs`
+`git add -A`
+`git commit -m "update dev version`
+`git push`
 
 ## Deploy - If deploying somewhere other than Github Pages
 
@@ -153,12 +142,13 @@ This generates a single html file with inlined css, a single js file, and a fold
 
 **This is only if we are going to be deploying somewhere other than Github Pages. To be updated at a later date**
 
-In `Makefile`, replace `year/month/name` with your own (eg. `2017/01/nba`). Uncomment code.
+In `Makefile`, replace `year/month/name` with your own (eg. `2017/01/abc`). Uncomment code.
 
 Run `make nae` to deploy and bust cache.
 
 ## Pre-launch checklist
 
+- Ensure `entry.js` and any graphic js files are in `src/assets/scripts/` and is referenced somewhere in your index file, like `<script src='assets/scripts/entry.js'></script>`
 - optimize images: make sure they aren't unncessarily large in dimensions (should be no more than 2x their final rendered dimensions), should also be crunched with something like [imageoptim](https://imageoptim.com/online).
 - clean data: reduce filesize bloat by making sure you aren't loading unnecessary columns and rows.
 - remove console logs
