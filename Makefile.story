@@ -1,8 +1,8 @@
-PHONY: github aws-assets aws-htmljs aws-cache live
+PHONY: github
 
 github:
 	rm -rf docs
-	cp -r dist/ docs
+	cp -r dev/ docs
 	git add -A
 	git commit -m "update dev version"
 	git push
@@ -11,13 +11,13 @@ archive:
 	zip -r archive.zip dev
 
 # aws-assets:
-# 	aws s3 sync dist s3://pudding.cool/year/month/name --delete --cache-control 'max-age=31536000' --exclude 'index.html' --exclude 'bundle.js'
+# 	aws s3 sync dist s3://<Enter URL here> --delete --cache-control 'max-age=31536000' --exclude 'index.html' --exclude 'bundle.js'
 
 # aws-htmljs:
-# 	aws s3 cp dist/index.html s3://pudding.cool/year/month/name/index.html
-# 	aws s3 cp dist/bundle.js s3://pudding.cool/year/month/name/bundle.js
+# 	aws s3 cp dist/index.html s3://<Enter URL here>
+# 	aws s3 cp dist/bundle.js s3://<Enter URL here>
 
 # aws-cache:
-# 	aws cloudfront create-invalidation --distribution-id E13X38CRR4E04D --paths '/year/month/name*'	
+# 	aws cloudfront create-invalidation --distribution-id <Enter ID here> --paths '<Enter path here>'	
 
-# pudding: aws-assets aws-htmljs aws-cache archive
+# nae: aws-assets aws-htmljs aws-cache archive
