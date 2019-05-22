@@ -1,55 +1,62 @@
 <!DOCTYPE html>
 
-<!--[if lt IE 7]><html class="no-js ie ie6 lt-ie9 lt-ie8 lt-ie7" lang="en-US" prefix="og: http://ogp.me/ns#"> <![endif]-->
-<!--[if IE 7]><html class="no-js ie ie7 lt-ie9 lt-ie8" lang="en-US" prefix="og: http://ogp.me/ns#"> <![endif]-->
-<!--[if IE 8]><html class="no-js ie ie8 lt-ie9" lang="en-US" prefix="og: http://ogp.me/ns#"> <![endif]-->
-<!--[if gt IE 8]><-->
-
 <html lang="en-US" prefix="og: http://ogp.me/ns#">
 
-<head>
+	<head>
 
-	{{> base/meta}}
+		{{> base/meta}}
 
-	<!-- smoosh -->
-	{{> base/stylesheets}}
-	<!-- endsmoosh -->
+		<!-- smoosh -->
+		{{> base/stylesheets}}
+		<!-- endsmoosh -->
 
-	<!-- boilerplate.css -->
+		<!-- boilerplate.css -->
 
+		<!-- smoosh -->
+		
+		{{> base/scripts}}
+		<!-- endsmoosh -->
 
-	{{> base/font}}
+		{{> base/analytics}}
 
-	<!-- smoosh -->
-	{{> base/scripts}}
-	<!-- endsmoosh -->
+		<meta property='og:title' content='{{meta.title}}' />
+		<meta property='og:site_name' content='New American Economy' />
+		<meta property='og:url' content='{{meta.url}}' />
+		<meta property='og:image' content='{{meta.imgFacebook}}' />
+		<meta property='og:image:type' content='image/png' />
+		<meta property='og:image:width' content='1200' />
+		<meta property='og:image:height' content='675' />
+		<meta property='og:description' content='{{meta.description}}' />
+		<meta property='og:type' content='article' />
+		<meta property='og:locale' content='en_US' />
 
-	<!-- {{> base/analytics}} -->
+		<meta name='twitter:card' content='summary_large_image' />
+		<meta name='twitter:site' content='http://data.newamericaneconomy.org' />
+		<meta name='twitter:creator' content='@newamericanecon' />
+		<meta property='twitter:title' content='{{meta.title}}' />
+		<meta property='twitter:description' content='via @newamericanecon: Data Briefs https://data.newamericaneconomy.org' />
+		<meta property='twitter:image:src' content='http://data.newamericaneconomy.org/assets/<ADD TWITTER IMAGE HERE>' />
+		<meta name="twitter:image:alt" content="{{meta.title}}">
 
-</head>
+	</head>
 
-<body class="home blog page-has-cta">
-	<section class="main content" role="main">
-		<div id="main-content" class="content__container">
+	<body>
 
-			{{> base/header}}
+		{{> base/header}}
 
-			{{> base/article-toolbar}}
-			
+		{{> base/article-toolbar}}
 
-			{{> story/intro}}
-							
-			<!-- PUT ALL YOUR HTML HERE-->
+		{{> story/intro}}
 
-			{{> base/news-footer}}
+		{{> story/breakdown}}
 
-		</div>
-	</section>
+		{{> base/news-footer}}
 
-	<script src='https://unpkg.com/intersection-observer@0.5.0/intersection-observer.js'></script>
-  	<script src='https://unpkg.com/scrollama'></script>
-	<script src='assets/scripts/entry.js'></script>
-	
-</body>
-
+		<script src='assets/scripts/intersection-observer.js'></script>
+	  	<script src='assets/scripts/scrollama.min.js'></script>
+		<script src='assets/scripts/entry.js'></script>
+		<script src="https://d1tdp7z6w94jbb.cloudfront.net/js/jquery-3.3.1.min.js" type="text/javascript" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  		<script src="assets/scripts/nae-hero-starter-51dfb688-9a6d61464d87c.js" type="text/javascript"></script>
+  		<!-- [if lte IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/placeholders/3.0.2/placeholders.min.js"></script><![endif] -->
+	</body>
 </html>

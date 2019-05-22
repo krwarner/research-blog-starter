@@ -1,0 +1,85 @@
+.step1 h3 {
+  font-family: Foundersgrotesk, sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 2em;
+  line-height: 1.3;
+  text-align: left;
+}
+
+.step1 p {
+  font-family: 'Lyontext web', sans-serif;
+  font-size: 1.2em;
+  line-height: 1.55;
+  padding-bottom: 15rem;
+  text-align: left;
+  display: block;
+}
+
+.step1 {
+  margin: 2rem auto;
+  opacity: 0.2;
+  display:block;
+  height: 100% !important;
+}
+
+.step1.is-active {
+  opacity: 1;
+}
+
+.step1 p:after {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 0;
+    height: 0;
+    border-bottom: 30px solid #21d279;
+    border-left: 30px solid transparent;
+}
+
+#flipped-scroll {
+  position: relative;
+  border-top: 1px;
+  border-bottom: 1px;
+}
+
+.scroll__figure1 {
+  position: -webkit-sticky;
+  position: sticky;
+  padding-left: 20%;
+  top: 0;
+  bottom: auto;
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+  z-index: 100;
+}
+
+.scroll__figure1.is-fixed {
+  position: fixed;
+}
+
+.scroll__figure1.is-bottom {
+  bottom: 0;
+  top: auto;
+}
+
+.scroll__text1 {
+  position: relative;
+  padding-bottom: 10rem;
+  padding-left: 1.5rem;
+  padding-right: 1rem;
+  padding-top: 1rem;
+  /*max-width: 30rem;*/
+  width: 30%;
+  min-width: 200px;
+  /*background-color: #393745;*/
+  color: #000;
+  z-index: 0;
+}
+
+.breakdown_story {
+  width: 80%;
+  margin: auto !important;
+}

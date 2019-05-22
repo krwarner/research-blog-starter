@@ -1,7 +1,7 @@
 PHONY: github
 
 github:
-	rm -rf docs
+	rm -r docs
 	cp -r dev/ docs
 	git add -A
 	git commit -m "update dev version"

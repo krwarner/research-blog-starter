@@ -15,7 +15,7 @@ gulp.task('html-dev', () => {
 		.partials('./src/html/partials/**/*.hbs')
 		.helpers('./src/html/helpers/*.js')
 		.data('./template-data/**/*.{js,json}')
-		.data({ basepath: '', timestamp: Date.now() });
+		.data({ basepath: 'https://github.com/krwarner/', timestamp: Date.now() });
 
 	return (
 		gulp
